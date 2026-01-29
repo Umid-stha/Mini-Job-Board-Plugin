@@ -1,0 +1,26 @@
+/* Meta box wrapper styling */
+.job-meta-field {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.job-meta-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.job-meta-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Optional: hover/focus */
+.job-meta-input:focus {
+    outline: none;
+    border-color: #4B9E3B;
+    box-shadow: 0 0 0 2px rgba(75, 158, 59, 0.2);
+}
