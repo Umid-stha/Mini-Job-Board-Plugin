@@ -1,0 +1,74 @@
+.apply-form-wrapper {
+    max-width: 520px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.apply-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.apply-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.apply-form .form-group {
+    margin-bottom: 18px;
+}
+
+.apply-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.apply-form input,
+.apply-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus {
+    border-color: #309689;
+    box-shadow: 0 0 0 3px rgba(48, 150, 137, 0.15);
+}
+
+.apply-form input[type="file"] {
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.apply-btn {
+    width: 100%;
+    background: #309689;
+    color: #fff;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.apply-btn:hover {
+    background: #267e73;
+    transform: translateY(-1px);
+}

@@ -6,16 +6,20 @@
 *Author: Umid Shrestha
 */
 
+namespace MJB;
+
 if (!defined('ABSPATH')) {
     exit;
 }
+
+require_once plugin_dir_path(__FILE__) . 'mjb-application.php';
 
 class MiniJobBoard {
     public function __construct() {
 
         add_action('init', array($this, 'register_job_post_type'));
         
-        add_action('wp-enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
 
         register_activation_hook(__FILE__, array($this, 'activate'));
 
@@ -39,6 +43,8 @@ class MiniJobBoard {
             }
         });
 
+        $application = new Applications();
+        $application->init();
     }
 
     public function register_job_post_type() {
@@ -80,8 +86,8 @@ class MiniJobBoard {
         flush_rewrite_rules();
     }
 
-    public function enqueue_scripts() {
-            wp_enqueue_style('mini-job-board-style', plugin_dir_url(__FILE__) . 'assets/style.css');
+    public function enqueue_styles() {
+        wp_enqueue_style('mini-job-board-style', plugin_dir_url(__FILE__) . 'assets/style.css');
     }
 
     public function create_job_type_taxonomy() {
@@ -215,6 +221,7 @@ class MiniJobBoard {
             update_post_meta( $post_id, 'salary', $salary);
         }
     }
+
 }
 
 new MiniJobBoard();
