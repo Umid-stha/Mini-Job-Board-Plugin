@@ -102,7 +102,6 @@ class MiniJobBoard {
         );
         $args   = array(
             'labels'            => $labels,
-            'hierarchical'      => true,
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
