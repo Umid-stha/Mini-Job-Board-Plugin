@@ -71,7 +71,7 @@ class MiniJobBoard {
             'supports' => array('title', 'editor'),
             'menu_position' => 5,
             'menu_icon' => 'dashicons-businessman',
-            
+            'taxonomies' => ['category', 'post_tag'],
         );
 
         register_post_type('job', $args);
