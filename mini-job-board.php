@@ -102,6 +102,7 @@ class MiniJobBoard {
         );
         $args   = array(
             'labels'            => $labels,
+			'hierarchical'      => true,
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
@@ -121,7 +122,6 @@ class MiniJobBoard {
             'menu_name'         => __( 'Job Location' ),
     );
         $args   = array(
-            'hierarchical'      => true,
             'labels'            => $labels,
             'query_var'         => true,
             'rewrite'           => [ 'slug' => 'job_location' ],
